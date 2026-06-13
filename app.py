@@ -63,7 +63,7 @@ def decrypt_text(key: str, cipher_text: str):
     return "".join(decrypted_chars), alphabet_display
 
 # Build the Gradio Interface
-with ui.Blocks(title="Cipherer", theme=ui.themes.Soft()) as demo:
+with ui.Blocks(title="Cipherer") as demo:
     ui.Markdown("# 🔐 Cipherer")
     ui.Markdown(
         "Encrypt and decrypt text using a deterministic, key-based substitution cipher. "
@@ -91,8 +91,7 @@ with ui.Blocks(title="Cipherer", theme=ui.themes.Soft()) as demo:
                     encrypt_output = ui.Textbox(
                         label="Encrypted Output", 
                         interactive=False, 
-                        lines=5,
-                        show_copy_button=True
+                        lines=5
                     )
                     encrypt_mapping = ui.Textbox(
                         label="Generated Alphabet Mapping", 
@@ -126,8 +125,7 @@ with ui.Blocks(title="Cipherer", theme=ui.themes.Soft()) as demo:
                     decrypt_output = ui.Textbox(
                         label="Decrypted Output", 
                         interactive=False, 
-                        lines=5,
-                        show_copy_button=True
+                        lines=5
                     )
                     decrypt_mapping = ui.Textbox(
                         label="Generated Alphabet Mapping", 
@@ -142,4 +140,4 @@ with ui.Blocks(title="Cipherer", theme=ui.themes.Soft()) as demo:
             )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(theme=ui.themes.Soft())
