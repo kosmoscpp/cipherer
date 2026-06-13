@@ -138,6 +138,17 @@ with ui.Blocks(title="Cipherer") as demo:
                 inputs=[decrypt_key, cipher_input],
                 outputs=[decrypt_output, decrypt_mapping]
             )
+            
+    # --- FOOTER CREDITS ---
+    ui.HTML(
+        """
+        <div style="text-align: center; margin-top: 25px;">
+            <a href="https://www.instagram.com/kosmos.cpp" target="_blank" style="text-decoration: none; color: #E1306C; font-weight: bold; font-size: 15px;">
+                Follow Me ig@kosmos.cpp
+            </a>
+        </div>
+        """
+    )
 
 if __name__ == "__main__":
     demo.launch(theme=ui.themes.Soft())
