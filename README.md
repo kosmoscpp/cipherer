@@ -4,6 +4,8 @@ Cipherer is a simple web application that encrypts and decrypts messages using a
 
 Enter a key and a message, and Cipherer generates a unique secret alphabet based on that key. Using the same key allows the encrypted text to be decrypted back to its original form.
 
+Huggingface Link: https://huggingface.co/spaces/kosmoscpp/cipherer
+
 ## Features
 
 - 🔒 Encrypt messages with a custom key
